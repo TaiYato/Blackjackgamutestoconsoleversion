@@ -22,13 +22,16 @@ class Program
             Console.WriteLine("Balance: $" + balance);
 
             // Ask the player for their bet amount
-            Console.Write("Enter your bet amount: ");
-            bet = int.Parse(Console.ReadLine());
-            balance -= bet;
-            if (bet < balance)
+            //Console.Write("Enter your bet amount: ");
+            bet = 0;
+            
+            while (bet <=0 || bet > balance)
             {
-                
+                // Ask the player for their bet amount
+                Console.Write("Enter your bet amount: ");
+                bet = int.Parse(Console.ReadLine());
             }
+            balance -= bet;
                 
 
             // Deal two cards to the player and two cards to the dealer
